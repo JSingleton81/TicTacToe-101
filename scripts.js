@@ -63,6 +63,8 @@ const addMarker = (id) => {
 
 
 
+
+
 // This "changeMarker" function changes "X" to "O" in the "currentMarker" variable or "O" to "X"
 const changeMarker = () => {
   if(currentMarker === "X"){
@@ -105,3 +107,26 @@ const resetBoard = () => {
     squares[i].innerHTML = null
   }  
 }
+
+const checkForWin = () => {
+     if(horizontalWin() || verticalWin() || diagonalWin()) {
+      setTimeout(() => {
+       window.alert(`Player ${currentMarker} won!`)
+      }, 100); 
+     } else {
+       changeMarker()
+     }
+   }
+
+   const horizontalWin = () => {
+     // Your code here to check for horizontal wins
+   return resetBoard.some  
+   }
+
+   const verticalWin = () => {
+     // Your code here to check for vertical wins
+   }
+
+   const diagonalWin = () => {
+     // Your code here to check for diagonal wins
+   }
